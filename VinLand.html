@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinLandSever</title>
+    <link rel="stylesheet" href="VinLand.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service Worker зарегистрирован:', registration);
+          }).catch(error => {
+            console.log('Ошибка при регистрации Service Worker:', error);
+          });
+        });
+      }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <Header class="shapka">
+            <div class="line">
+                <!-- Где лого не забыть впихнуть картинку либо оставить так -->
+                <div ><H1 class="logo">VinLand </H1><h2 class="logol">- ресторан северной кухни</h3></div>
+                <div class="menu">
+                    <ul>
+                     <li><a href="menu.html">Меню</a></li>
+                        <li><a href="#">Особый ужин</a></li>
+                     <li><a href="#">Новости</a></li>
+                        <li><a href="#">Забронировать столик</a></li>
+                   
+                    </ul>
+               
+                </div>
+                <button class="button">Заказать еду</button> 
+            </div>
+        </Header>
+        <footer class="footer">
+            <div class="footlog">
+                <h2>©VINLAND - Ресторан вкусной северной кухни</h2>
+            </div>  
+        </footer>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
